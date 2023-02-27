@@ -23,6 +23,7 @@
 
     table {
       border-spacing: 0;
+  
     }
 
     td {
@@ -103,27 +104,138 @@
     }
 
     @media screen and (max-width: 599.98px) {
-      .two-columns .padding {
-        padding-right: 0 !important;
-        padding-left: 0 !important;
+      table {
+        border-collapse: collapse !important;
+      }
+      
+      img.logo {
+        width: 110px !important;
+        height: auto !important;
       }
 
-      .two-columns .content img {
-        width: 300px !important;
-        max-width: 300px !important;
+      .header-wrapper {
+        padding-top: 17px !important;
+      }
+
+      .responsive-header {
+        font-size: 18px !important;
+        line-height: 40px !important;
+      }
+
+      .responsive-space {
+        height: 8px !important;
+        line-height: 6px !important;
+      }
+
+      .responsive-text {
+        font-size: 13px !important;
+        line-height: 16px !important;
+      }
+
+      .padding-top {
+        padding-top: 5px !important;
+      }
+
+      .line-height {
+        line-height: 22px !important;
+      }
+
+      .footer-container {
+        width: 100% !important;
+      }
+
+      .footer-links {
+        font-size: 10px !important;
+        line-height: 15px !important;
+        border-left: 1px solid #D1D5D9 !important;
+        padding-left: 8px !important;
+        border-right: none !important;
+      }
+
+      .footer-text {
+        padding-left: 4px !important;
+        font-size: 10px !important;
+        line-height: 15px !important;
+      }
+
+      }
+
+
+
+    @media screen and (max-width: 399.98px) {
+      table {
+        border-collapse: collapse !important;
+      }
+
+      img.logo {
+        width: 90px !important;
+        height: auto !important;
+      }
+
+      .header-wrapper {
+        padding-top: 8px !important;
+      }
+
+      .responsive-header {
+        font-size: 18px !important;
+        line-height: 40px !important;
+      }
+
+      .responsive-space {
+        height: 8px !important;
+        line-height: 6px !important;
+      }
+
+      .responsive-text {
+        font-size: 11px !important;
+        line-height: 17px !important;
+      }
+
+      .footer-links {
+        font-size: 10px !important;
+        line-height: 15px !important;
+        border-left: 1px solid #D1D5D9 !important;
+        padding-left: 8px !important;
+        border-right: none !important;
+      }
+      .footer-container {
+        width: 90% !important;
+      }
+
+      .footer-text {
+        padding-left: 4px !important;
+        font-size: 10px !important;
+        line-height: 15px !important;
+      }
+
+      img.social-icons {
+        width: 20px !important;
+        height: 20px !important;
+        padding-right: 7px !important;
       }
     }
 
-    @media screen and (max-width: 399.98px) {
-      .two-columns .padding {
-        padding-right: 0 !important;
-        padding-left: 0 !important;
+
+    @media screen and (max-width: 299.98px) {
+      table {
+        border-collapse: collapse !important;
       }
 
-      .two-columns .content img {
-        width: 300px !important;
-        max-width: 300px !important;
+      /* .footer-container {
+        width: 60% !important;
+      } */
+/*       
+      .full-width {
+        width: 100% !important;
+        height: 100% !important;
+     
+      } */
+
+      .full-block {
+        display: block !important;
+        text-align: center !important; 
       }
+    
     }
 
     @media (prefers-color-scheme: dark) {}
@@ -152,12 +264,12 @@
       <!-- START OF LOGO -->
       <tr>
         <td align="center" style="padding-top: 30px">
-          <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="80%" class>
+          <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="80%">
             <tbody>
               <tr>
                 <td align="left">
                   <a href="#" target="_blank">
-                    <img src="https://i.ibb.co/p4CTQSP/logo-big-sliced.png" alt="logo-big-sliced" border="0" style="display: block; border: none" width="170" class="logo" />
+                    <img src="https://i.ibb.co/p4CTQSP/logo-big-sliced.png" alt="streamify-logo-sliced" border="0" style="display: block; border: none" width="170" class="logo" />
                   </a>
                 </td>
               </tr>
@@ -174,18 +286,18 @@
             <tbody>
               <tr>
                 <td align="center">
-                  <h1 style="Margin: 0; font-weight: 600; line-height: 35px; font-size: 35px;">Enjoy Streamify Premium
+                  <h1 class="responsive-header" style="Margin: 0; font-weight: 600; line-height: 35px; font-size: 35px;">Enjoy Streamify Premium
                   </h1>
                 </td>
               </tr>
               <tr>
                 <td height="20" style="line-height: 20px;  font-family: Arial, sans-serif; mso-line-height: exactly;"
-                  class="mobile">&nbsp;</td>
+                  class="responsive-space">&nbsp;</td>
               </tr>
               <tr>
                 <td align="center">
                   <p style="Margin: 0; font-size: 15px; font-weight: 300; line-height: 14px; font-family: 'Montserrat', sans-serif;"
-                    class="mobile">June 9th, 2023</p>
+                    class="responsive-text">June 9th, 2023</p>
                 </td>
               </tr>
               <tr>
@@ -196,7 +308,7 @@
               <tr>
                 <td align="center">
                   <p style="Margin: 0; font-size: 15px; font-weight: 300; line-height: 14px; font-family: 'Montserrat', sans-serif;"
-                    class="mobile">
+                  class="responsive-text">
                     Order ID: #087954618498487
                 </td>
                 </p>
@@ -207,6 +319,7 @@
         </td>
       </tr>
       <!-- END OF HEADER  -->
+
 
       <!-- START OF TRANSACTION FIRST ROW -->
       <tr>
@@ -220,13 +333,13 @@
                     <tbody>
                       <tr>
                         <td width="100" align="left" style="padding-top: 5px">
-                          <p style="Margin: 0; font-weight: 700;  font-weight: bold; font-size: 15px; line-height: 14px; font-family: 'Montserrat', sans-serif;"
-                            class="mobile">
+                          <p class="responsive-text" style="Margin: 0; font-weight: 700;  font-weight: bold; font-size: 15px; line-height: 14px; font-family: 'Montserrat', sans-serif;"
+                            >
                             Streamify Premium
                         </td>
                         </p>
                         <td align="right" width="100" style="padding-top: 5px">
-                          <p
+                          <p class="responsive-text"
                             style="Margin: 0; font-size: 15px; line-height: 14px; font-family: 'Montserrat', sans-serif; font-weight: 300;">
                             $12.99
                           </p>
@@ -234,7 +347,7 @@
                       </tr>
                       <tr>
                         <td align="left" style="padding-top: 5px; padding-bottom: 10px;">
-                          <p
+                          <p class="responsive-text padding-top"
                             style="Margin: 0; font-size: 15px; line-height: 24px; font-family: 'Montserrat', sans-serif; font-weight: 300;">
                             1 month
                           </p>
@@ -250,6 +363,7 @@
       </tr>
       <!-- END OF TRANSACTION FIRST ROW -->
 
+
       <!-- START OF TRANSACTION SECOND ROW -->
       <tr>
         <td align="center">
@@ -262,12 +376,12 @@
                     <tbody>
                       <tr>
                         <td align="left" style="padding: 12px 0px">
-                          <p
+                          <p class="responsive-text"
                             style="Margin: 0;font-weight: 700; font-family: 'Montserrat', sans-serif; font-size: 15px; line-height: 14px;">
                             Sales Tax 8%</p>
                         </td>
                         <td align="right" style="padding: 10px 0px">
-                          <p
+                          <p class="responsive-text"
                             style="Margin:0; font-family: 'Montserrat', sans-serif; font-size: 15px; line-height: 14px;">
                             $1.03</p>
                         </td>
@@ -294,12 +408,12 @@
                     <tbody>
                       <tr>
                         <td align="left" style="padding: 10px 0px" width="100">
-                          <p
+                          <p class="responsive-text"
                             style="Margin: 0; font-family: 'Montserrat', sans-serif; font-size: 15px; line-height: 14px; font-weight: 700;">
                             Total</p>
                         </td>
                         <td align="right" style="padding: 12px 0px" width="100">
-                          <p
+                          <p class="responsive-text"
                             style="Margin: 0; font-family: 'Montserrat', sans-serif; font-size: 15px; line-height: 14px;">
                             $14.02</p>
                         </td>
@@ -326,7 +440,7 @@
               </tr>
               <tr>
                 <td align="center">
-                  <p
+                  <p class="responsive-text"
                     style="Margin:0; line-height: 14px; font-size: 14px; font-family:'Montserrat', sans-serif; font-weight: 600; color:rgb(97, 100,103) ">
                     Payment Method
                   </p>
@@ -339,7 +453,7 @@
               </tr>
               <tr>
                 <td align="center">
-                  <p
+                  <p class="responsive-text"
                     style="Margin:0; line-height: 14px; font-size: 14px; font-family:'Montserrat', sans-serif; font-weight: 300; color:rgb(97, 100,103) ">
                     Card (#### #### #### 9784)
                   </p>
@@ -352,7 +466,7 @@
               </tr>
               <tr>
                 <td align="center">
-                  <p
+                  <p class="responsive-text"
                     style="Margin:0; line-height: 14px; font-size: 14px; font-family:'Montserrat', sans-serif; font-weight: 600; color:rgb(97, 100,103) ">
                     Username
                   </p>
@@ -361,11 +475,11 @@
               <tr>
                 <td height="10px"
                   style="line-height: 10px; font-size: 10px; font-family:'Montserrat', sans-serif; mso-line-height-rule: exactly;"
-                  class="mobile-space">&nbsp;</td>
+                  class="responsive-space">&nbsp;</td>
               </tr>
               <tr>
                 <td align="center">
-                  <p
+                  <p class="responsive-text"
                     style="Margin:0; line-height: 14px; font-size: 14px; font-family:'Montserrat', sans-serif; font-weight: 300; color:rgb(97, 100,103) ">
                     Peter Griffin
                   </p>
@@ -377,6 +491,7 @@
       </tr>
       <!-- END OF PAYMENT METHOD & USERNAME -->
 
+
       <!-- START OF AUTHORIZATION -->
       <tr>
         <td align="center" style="padding-top: 25px">
@@ -384,14 +499,14 @@
             <tbody>
               <tr>
                 <td align="center">
-                  <p style="Margin: 0; line-height: 24px; font-size: 16px; font-family:'Montserrat', sans-serif; font-weight: 300; color:rgb(97, 100,103)"
-                    class="mobile-copy">
+                  <p style="Margin: 0; line-height: 24px; font-size: 16px; font-family:'Montserrat', sans-serif; font-weight: 300; color:rgb(144, 144, 145)"
+                    class="responsive-text line-height">
                     You have authorized Streamify to automatically charge you the above price each month until you
                     cancel. If the price changes, we’ll notify you beforehand. You can check your renewal date or cancel
-                    at any time on your account page following the instructions <a class="mobile-copy" target="_blank"
+                    at any time on your account page following the instructions <a class="responsive-text" target="_blank"
                       style="font-size: 16px; font-family:'Montserrat', sans-serif; font-weight: 300; color:#1255CC; text-decoration: underline;">here.</a>
                     No partial refunds. Terms and Conditions apply. Important information for residents in the State of
-                    California <a class="mobile-copy"
+                    California <a class="responsive-text line-height"
                       style="font-size: 16px; font-family:'Montserrat', sans-serif; font-weight: 300; color:#1255CC; text-decoration: underline;"
                       target="_blank">here.</a>
                   </p>
@@ -417,7 +532,7 @@
                       <tr>
                         <td align="left" style="padding: 8px; padding-left: 0px">
                           <img src="https://i.ibb.co/Qf7SKm1/streamify-footer-logo.png" alt="streamify-footer-logo" border="0" 
-                            class="small-logo" width="70" height="25" style="Margin: 0; display: block;">
+                            class="small-logo" width="70" height="24" style="Margin: 0; display: block;">
                         </td>
                       </tr>
                     </tbody>
@@ -444,32 +559,32 @@
                       <tr>
                         <td align="left">
                           <table align="left" border="0" cellpadding="0" cellspacing="0" role="presentation" width="70%"
-                            class="links-mobile-container">
+                            class=" footer-container">
                             <tbody>
                               <tr>
                                 <td align="left" style="padding: 15px 0px">
                                   <p style="margin: 0; color:rgb(97, 100, 103); font-family: Montserrat; font-size: 11px; font-weight: 300; line-height: 11px; padding-right: 11px; display: inline-block;"
-                                    class="mobile-footer devices-links"> Get Streamify for: </p>
+                                    class="footer-text full-width full-block"> Get Streamify for: </p>
                                 </td>
                                 <td align="left" style="padding: 15px 0px">
                                   <a href="#" target="_blank"
                                     style="Margin: 0; color:rgb(97, 100, 103); font-family: Montserrat; font-size: 11px; font-weight: 600; line-height: 11px; padding-right: 11px; border-right: 1px solid #D1D5D9"
-                                    class="mobile-footer devices-links"> iPhone </a>
+                                    class="footer-links"> iPhone </a>
                                 </td>
                                 <td align="left" style="padding: 15px 0px">
                                   <a href="#" target="_blank"
                                     style="Margin: 0; color:rgb(97, 100, 103); font-family: Montserrat; font-size: 11px; font-weight: 600; line-height: 11px; padding-right: 11px; border-right: 1px solid #D1D5D9"
-                                    class="mobile-footer devices-links"> iPad </a>
+                                    class="footer-links"> iPad </a>
                                 </td>
                                 <td align="left" style="padding: 15px 0px">
                                   <a href="#" target="_blank"
                                     style="Margin: 0; color:rgb(97, 100, 103); font-family: Montserrat; font-size: 11px; font-weight: 600; line-height: 11px; padding-right: 11px; border-right: 1px solid #D1D5D9"
-                                    class="mobile-footer devices-links"> Android </a>
+                                    class="footer-links"> Android </a>
                                 </td>
                                 <td align="left" style="padding: 15px 0px">
                                   <a href="#" target="_blank"
                                     style="Margin: 0; color:rgb(97, 100, 103); font-family: Montserrat; font-size: 11px; font-weight: 600; line-height: 11px; "
-                                    class="mobile-footer devices-links"> Other </a>
+                                    class="footer-links"> Other </a>
                                 </td>
                               </tr>
                             </tbody>
@@ -499,9 +614,9 @@
                       <tr>
                         <td align="left" style="padding: 15px 0px; border-top: 1px solid #D1D5D9;">
                           <p style="Margin:0; color: rgb(97,100,103); font-family: 'Montserrat'; font-size: 11px; font-weight: 300; line-height: 17px;"
-                            class="mobile-footer">
+                            class="footer-text">
                             This message was sent to petergriffin@gmail.com. If you have questions or complaints, please
-                            <a
+                            <a class="footer-text"
                               style="Margin:0; color: rgb(97,100,103); font-family: 'Montserrat'; font-size: 11px; font-weight: 600;">contact
                               us.</a>
                           </p>
@@ -529,13 +644,10 @@
                     <tbody>
                       <tr>
                         <td align="left" style="padding-bottom: 20px">
-                          <p
+                          <p class="footer-text"
                             style="Margin: 0; color: rgb(97,100,103); font-family: 'Montserrat'; font-size: 11px; font-weight: 300; line-height: 17px;">
                             Streamify USA Inc., c/o BF&FG Service Corp., Six King Square, 15th floor, Eleventh and Ninth
                             streets, Washington, New Jersey, California 90210, USA
-
-
-
                           </p>
                         </td>
                       </tr>
@@ -564,27 +676,28 @@
                       <tr>
                         <td align="left" style="align-items:center; vertical-align: middle">
                           <a href="#" target="_blank">
-                            <img src="https://i.ibb.co/DbFGkmd/icons8-facebook-30-2.png" alt="icons8-facebook-30-2" border="0"
+                            <img class="social-icons" src="https://i.ibb.co/DbFGkmd/icons8-facebook-30-2.png" alt="icons8-facebook-30-2" border="0"
                               width="22" height="22" style="margin-right: 5px"></a>
                         </td>
                         <td align="left">
                           <a href="#" target="_blank">
-                            <img src="https://i.ibb.co/ZGBxLHm/icons8-instagram-30.png" alt="icons8-instagram-30" border="0"
+                            <img class="social-icons" src="https://i.ibb.co/ZGBxLHm/icons8-instagram-30.png" alt="icons8-instagram-30" border="0"
+                              width="22" height="22" style="margin-right: 5px">
+                            </a>
+                        </td>
+                        <td align="left">
+                          <a href="#" target="_blank">
+                            <img class="social-icons" src="https://i.ibb.co/zmR3WYs/icons8-linkedin-circled-30.png" alt="icons8-linkedin-circled-30" border="0"
                               width="22" height="22" style="margin-right: 5px"></a>
                         </td>
                         <td align="left">
                           <a href="#" target="_blank">
-                            <img src="https://i.ibb.co/zmR3WYs/icons8-linkedin-circled-30.png" alt="icons8-linkedin-circled-30" border="0"
-                              width="22" height="22" style="margin-right: 5px"></a>
-                        </td>
-                        <td align="left">
-                          <a href="#" target="_blank">
-                            <img src="https://i.ibb.co/PhydWwG/icons8-twitter-30.png" alt="icons8-twitter-30" border="0"
+                            <img class="social-icons" src="https://i.ibb.co/PhydWwG/icons8-twitter-30.png" alt="icons8-twitter-30" border="0"
                               width="22" height="22" style="margin-right: 5px; "></a>
                         </td>
                         <td align="left">
                           <a href="#" target="_blank">
-                            <img src="https://i.ibb.co/yp95RS0/icons8-youtube-30.png" alt="icons8-youtube-30" border="0"
+                            <img class="social-icons" src="https://i.ibb.co/yp95RS0/icons8-youtube-30.png" alt="icons8-youtube-30" border="0"
                               width="22" height="22" style="margin-right: 5px; "></a>
                         </td>
                       </tr>
