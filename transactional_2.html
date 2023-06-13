@@ -1,799 +1,871 @@
-<!DOCTYPE html
-  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office"> <!-- defined XML and Office Open XML namespaces need for Outlook on Windows -->
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8;" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="color-scheme" content="light dark" />
-  <meta name="supported-color-scheme" content="light dark" />
-
-  <title>Streamify Transactional 2</title>
-
-  <style type="text/css">
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
-
-    body {
-      margin: 0;
-      background-color: #cccccc;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    table {
-      border-spacing: 0;
+    <meta charset="utf-8"> <!-- Unicode character encoding for email, covers most characters for most languagues. -->
+    <meta name="viewport" content="width=device-width,initial-scale=1"> <!-- initial zoom should be 100%, viewing area should be width of device -->
+   	<meta name="x-apple-disable-message-reformatting"> <!-- prevents Apple from doing any unwanted scaling or zooming on IOS devices-->
+    <meta name="supported-color-scheme" content="light dark" />
   
-    }
+    <!--[if !mso]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- improve rendering in IE9 or lower-->
+    <!--<![endif]-->
 
-    td {
-      padding: 0;
-    }
-
-    img {
-      border: 0;
-    }
-
-    h1 {
-      color: rgb(85, 85, 85)
-    }
-
-    p {
-      color: rgb(97, 100, 103)
-    }
-
-    .wrapper {
-      width: 100%;
-      table-layout: fixed;
-      background-color: #cccccc;
-      padding-bottom: 40px;
-      padding-top: 30px;
-    }
-
-    .main {
-      margin: 0 auto;
-      width: 100%;
-      max-width: 600px;
-      background-color: #ffffff;
-      border-spacing: 0;
-      font-family: sans-serif;
-      color: #4a4a4a;
-    }
-
-    .two-columns {
-      font-size: 0;
-      text-align: center;
-      padding: 35px 0 40px;
-    }
-
-    .two-columns .column {
-      width: 100%;
-      max-width: 300px;
-      display: inline-block;
-      vertical-align: top;
-    }
-
-    .two-columns .padding {
-      padding: 20px;
-    }
-
-    .two-columns .content {
-      font-size: 15px;
-      text-align: left;
-      line-height: 20px;
-      font-weight: 500;
-    }
-
-    .button {
-      background-color: #1e5e7b;
-      color: #ffffff;
-      text-decoration: none;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      letter-spacing: 0.5px;
-    }
-
-    .two-columns.last {
-      padding: 0 !important;
-    }
-
-    a {
-      text-decoration: none;
-      color: #37cbbf;
-    }
-
-    @media screen and (max-width: 599.98px) {
-      table {
-        border-collapse: collapse !important;
-      }
-      
-      img.logo {
-        width: 110px !important;
-        height: auto !important;
-      }
-
-      .header-wrapper {
-        padding-top: 17px !important;
-      }
-
-      .responsive-header {
-        font-size: 18px !important;
-        line-height: 40px !important;
-      }
-
-      .responsive-space {
-        height: 8px !important;
-        line-height: 6px !important;
-      }
-
-      .responsive-text {
-        font-size: 13px !important;
-        line-height: 16px !important;
-      }
-
-      .padding-top {
-        padding-top: 5px !important;
-      }
-
-      .line-height {
-        line-height: 22px !important;
-      }
-
-      .no-left-border {
-        border-left: none !important
-      }
-
-      .footer-container {
-        width: 100% !important;
-      }
-
-      .footer-links {
-        font-size: 10px !important;
-        line-height: 15px !important;
-        border-left: 1px solid #D1D5D9 !important;
-        padding-left: 8px !important;
-        border-right: none !important;
-      }
-
-      .footer-text {
-        padding-left: 4px !important;
-        font-size: 10px !important;
-        line-height: 15px !important;
-      }
-
-      }
-
-
-
-    @media screen and (max-width: 365.98px) {
-      table {
-        border-collapse: collapse !important;
-      }
-
-      img.logo {
-        width: 90px !important;
-        height: auto !important;
-      }
-
-      .header-wrapper {
-        padding-top: 8px !important;
-      }
-
-      .responsive-header {
-        font-size: 18px !important;
-        line-height: 40px !important;
-      }
-
-      .responsive-space {
-        height: 8px !important;
-        line-height: 6px !important;
-      }
-
-      .responsive-text {
-        font-size: 11px !important;
-        line-height: 17px !important;
-      }
-
-
-      .full-width {
-      width: 100% !important;
-      min-width: 100% !important;
-      max-width: 100% !important;
-      height: 100% !important;
-      align-items: left !important;
-      }
-
-      .full-block {
-      display: block !important;
-      text-align: left !important; 
-      }
-
-
-      .footer-links {
-        width: 20% !important;
-        font-size: 10px !important;
-        line-height: 15px !important;
-        border-left: 1px solid #D1D5D9 !important;
-        padding-left: 8px !important;
-        padding-right: 8px !important;
-        border-right: none !important;
-      }
-      
-      .padding-left {
-        padding-left: 8px !important;
-      }
-
-
-      .no-left-border {
-        border-left: none !important
-      }
-
-      .footer-container {
-        width: 90% !important;
-      }
-
-      .footer-text {
-        text-align: left !important;
-        padding-left: 4px !important;
-        font-size: 10px !important;
-        line-height: 15px !important;
-      }
-
-      img.social-icons {
-        width: 20px !important;
-        height: 20px !important;
-        padding-right: 7px !important;
-      }
-    }
-
-
-    @media screen and (max-width: 265.98px) {
-      table {
-        border-collapse: collapse !important;
-      }
-
-      .no-left-border {
-        border-left: none !important
-      }
-
-      .footer-text {
-        text-align: left !important;
-        display: block !important;
-       width: 100% !important;
-      }
-      
-      .footer-links {
-        width: 90% !important;
-        font-size: 9px !important;
-        line-height: 15px !important;
-        border-left: 1px solid #D1D5D9 !important;
-        padding-left: 8px !important;
-        border-right: none !important;
-      }
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
     
+    <title></title><!-- best to leave empty --> 
+
+    <!--[if mso]> 
+
+      <style type="text/css"> 
+      table {border-collapse:collapse;border:0;border-spacing:0;margin:0;} 
+      div, td {padding:0;} 
+      div {margin:0 !important;} 
+      </style> 
+
+      <noscript> 
+      <xml> 
+      <o:OfficeDocumentSettings> 
+      <o:PixelsPerInch>96</o:PixelsPerInch> 
+      </o:OfficeDocumentSettings> 
+      </xml> 
+      </noscript> 
+
+      <![endif]-->
+  
+    <!--[if mso]> 
+      <style type="text/css">
+		table, tr, td {
+		border-collapse: collapse
+		}
+    body {
+     background-color: #ffffff !important;
     }
 
-    :root {
-         color-scheme: light dark;
-         supported-color-schemes: light dark;
-      }
-     /* Dark Mode media queries to target Apple and iOS*/
-    @media (prefers-color-scheme: dark) {
-      /* Custom Dark Mode Background Color */
-      body, center, table {
-        background: #272623 !important;
-        color: #ffffff!important;
-      } 
+		.table-line {
+		margin-left: 10px !important;
+		margin-left: 10px !important;
+		}
 
-     /* Custom Dark Mode Font Colors */ 
-     h1, h2, span, a, p  {
-      color: #ffffff !important;
-     }
+		.outlook-button  {
+		mso-border-radius-alt: 5px !important;
+		}
 
-    .icons {
-        color: #ffffff;
-     }
-    }
+		darkmode-outlook-button {
 
-    /* Dark Mode media queries to target some Android and Outlook.com */
-    /* [data-ogsc] {
+		}
 
-    } */
+      </style>
+    <![endif]--> 
+  
+      <style type="text/css">
+          @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
 
-    /* Dark Mode to keep white text in Gmail */
+          table, td, div, h1, p {font-family: "Montserrat",Arial, sans-serif;}
+          table, td {padding: 0}
 
-  </style>
-    <!--[if (gte mso 9 | (IE))]>
-    <style type ="text/css"
-      table { border-collapse: collapse !important;}
-  </style>
-  <![endif]-->
-</head>
-
-<body style="Margin:0; padding:0; min-width: 100%; background-color: #ffffff;">
-    <!--[if (gte mso 9) | (IE)]>
-    <style type ="text/css">
-      body {background-color: #ffffff !important; }
-      body, table, td, p, a {font-family: sans-serif, Arial, Helvetica !important;}
-    </style>
-  <![endif]-->
-
-
-  <center class="wrapper" style="width: 100%; background-color: #ffffff; table-layout: fixed; padding-bottom: 40px; padding-top: 40px">
-
-  <div style="max-width: 600px; background-color: #ffffff; box-shadow: 0 0 10px rgba(0,0,0,0.2);"> 
-
-  <!--Preheader (remove Comment)-->
-   <div style="font-size:0px; color: #ffffff; line-height: 1px; mso-line-height-rule: exactly; display: none; max-width: 0px; max-height: 0px; opacity: 0; overflow: hidden; mso-hide: all">
-    Your Streamify Payment.
-   </div>
-
-    <!-- Main Table -->
-    <!--[if (gte mso 9 | (IE)]>
-          <table width="600" align="center" style="border-spacing:0; color: #565656;" role="presentation">  
-          <tr>
-            <td style="padding: 0;">
-    <![endif]-->
-
-    <table class="main" align="center" border="0" cellpadding="0" cellspacing="0" width="600px" border-spacing="0" role="presentation"
-      style="
-          color: #565656;
-          font-family: 'Montserrat', sans-serif !important;
-          background-color: #ffffff;
+        
+          body, html {
           margin: 0;
+          font-family: 'Montserrat', sans-serif;
+          background-color: #cccccc;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+          table {
+          border-spacing: 0;
+          }
+
+          td {
           padding: 0;
-          width: 100%;
-          max-width: 600px;
-        ">
-        <!-- START OF LOGO -->
-        <tr>
-          <td align="center" style="padding-top: 30px">
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="80%">
-                <tr>
-                  <td align="left">
-                    <a href="#" target="_blank">
-                      <img src="https://i.ibb.co/p4CTQSP/logo-big-sliced.png" alt="streamify-logo-sliced" border="0" style="display: block; border: none" width="170" class="logo" />
-                    </a>
-                  </td>
-                </tr>
-            </table>
-          </td>
-        </tr>
-        <!-- END OF LOGO -->
+          }
 
-        <!-- START OF HEADER  -->
-        <tr>
-          <td align="center" style="padding-top: 25px" class="header-wrapper">
-            <table align="center" role="presentation" cellpadding="0" cellspacing="0" width="80%">
-                <tr>
-                  <td align="center">
-                    <h1 class="responsive-header" style="Margin: 0; font-weight: 600; line-height: 35px; font-size: 35px;">Enjoy Streamify Premium
-                    </h1>
-                  </td>
-                </tr>
-                <tr>
-                  <td height="20" style="line-height: 20px;  font-family: Arial, sans-serif; mso-line-height: exactly;"
-                    class="responsive-space">&nbsp;</td>
-                </tr>
-                <tr>
-                  <td align="center">
-                    <p style="Margin: 0; font-size: 15px; font-weight: 300; line-height: 14px; font-family: 'Montserrat', sans-serif;"
-                      class="responsive-text">June 9th, 2023</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td height="10"
-                    style="line-height: 10px;  font-family: 'Montserrat', sans-serif; mso-line-height: exactly;">&nbsp;
-                  </td>
-                </tr>
-                <tr>
-                  <td align="center">
-                    <p style="Margin: 0; font-size: 15px; font-weight: 300; line-height: 14px; font-family: 'Montserrat', sans-serif;"
-                    class="responsive-text">
-                      Order ID: #087954618498487
-                  </td>
-                  </p>
-                </tr>
-            </table>
-          </td>
-        </tr>
-        <!-- END OF HEADER  -->
+          img {
+            border: 0;
+            -ms-interpolation-mode: bicubic;
+
+          }
+        
+        	span .email {
+            color: #000000 !important;
+          	text-decoration: none !important;
+          }
+        
+          p {
+            color: #616467;
+          }
+        
+          a[x-apple-data-detectors],
+        	u + #body a,
+        	#MessageViewBody a
+        {
+          color: inherit !important;
+          text-decoration: none !important;
+          font-size: inherit !important;
+          font-family: inherit !important;
+          font-weight: inherit !important;
+          line-height: inherit !important;
+        }
+        
+        :root {
+          color-scheme: light dark;
+          supported-color-schemes: light dark;
+        }
+        
+        /* Dark Mode media queries to target Apple and iOS*/
+          @media (prefers-color-scheme: dark) {
+            /* Custom Dark Mode Background Color */
+
+            /* <!--[if mso]>
+        
+              body, center, table,td, div {
+              background: #333 !important;
+              color: #ffffff!important;
+              border: none !important;
+            }             	 
+          
+    <![endif]-->  */
+            
+            
+              body, center, table,td, div {
+          	 background: #333 !important;
+              color: #ffffff!important;
+              border: none !important;
+            }             	 
+       			
+            
+            html {
+              background: #000000 !important;
+            }
+            
+            body, center, table,td, div {
+              background: #333 !important;
+              color: #ffffff!important;
+              border: none !important;
+            } 
+            
+            	[data-ogsc] body,
+             	[data-ogsc] center,
+             	[data-ogsc] table,
+             	[data-ogsc] td,
+            	[data-ogsc] div
+            {
+              background: #333 !important;
+              color: #ffffff!important;
+              border: none !important;
+            }            
+            
+              [data-ogsb] body,
+             	[data-ogsb] center,
+             	[data-ogsb] table,
+             	[data-ogsb] td,
+            	[data-ogsb] div {
+              background: #333 !important;
+              color: #ffffff!important;
+              border: none !important;
+            }
+            
+            [data-ogsc] .line {
+               color: #F7F8F9!important;
+            }
+            
+             [data-ogsb] .line {
+               color: #F7F8F9!important;
+            }
+            
+            .spacer {
+              color: #000000 !important;
+              background: #333 !important;
+            }
+
+           /* Custom Dark Mode Font Colors */ 
+           h1, h2, h3, span, a, p  {
+            color: #ffffff !important;
+             
+           }
+          
+           a {
+             background: transparent !important;
+              /* background: #4e4e4e !important; */
+          
+            }
+            
+            hr {
+              border: 1px solid #ffffff !important;
+            }
+            
+            .line {
+            color:#F7F8F9 !important;
+    				background: #F7F8F9 !important;
+           
+           }
+            
+            .horizontal-line {
+            color:#F7F8F9 !important;
+    				background: #F7F8F9 !important;
+              height: auto !important;
+            }
+
+      
+          .icons {
+              filter: brightness(0) invert(1);
+           }
+            
+            a[class=button-border] {
+              border: 1px solid #ffffff !important;
+            }
+            
+            
+          img[class=icons-background] {
+              background: transparent !important;
+          }
+            
+       		.email {
+            color: #ffffff !important;
+          	text-decoration: none !important;
+          }
+            
+           .darkmode-transparent {
+            background-color: transparent!important;
+          }
+        }
+
+        
+        
+        @media (max-width: 350px) {
+          .three-col .column {
+            max-width: 100% !important;
+          }
+          
+          h1 {
+            font-size: 28px !important;
+          }
+          
+          .line {
+            margin-left:3px !important;
+            margin-right: 3px !important;
+          }
+          
+          .horizontal-line {
+              margin-left:3px !important;
+            margin-right: 3px !important;
+          }
+          
+           .two-col .column {
+            max-width: 100% !important;
+          }
+     
+       		.column-info.right-column {
+            	text-align: center !important;
+            }
+
+        	.two-col .column .left-column {
+            display: block !important;
+            text-align: center !important;
+            margin: 0 auto !important;
+        } 
+          
+         .two-col .column .right-column h2 {
+            display: block !important;
+            width: 330px !important;
+            max-width: 100% !important;
+        }
+
+        .responsive-space {
+          height: 8px !important;
+          line-height: 6px !important;
+        }
+
+        .responsive-text {
+          font-size: 11px !important;
+          line-height: 17px !important;
+        }
+      }
+        
+  
+        
+      
+        @media (min-width: 350px) and (max-width: 460px) {
+          .three-col .column {
+            max-width: 50% !important;
+          }
+          .two-col .column {
+            
+            max-width: 100% !important;
+          }
+          
+          h1 {
+            font-size: 32px !important;
+          }
+          
+          .line {
+            margin-left: 3px !important;
+            margin-right: 3px !important;
+          }
+
+          .horizontal-line {
+             margin-left: 3px !important;
+            margin-right: 3px !important;
+          }
+          
+    		 .two-col .column .right-column {
+            max-width: 100% !important;
+            display: block !important;
+            text-align: center !important;
+            margin: 0 auto !important;
+            }
+
+          .two-col .column .left-column {
+            max-width: 100% !important;
+            display: block !important;
+            text-align: center !important;
+            margin: 0 auto !important;
+        } 
+          
+         .two-col .column img {
+          	width: 100% !important;
+           	height: auto !important;
+           	max-width: 100% !important;
+           } 
+          
+          .two-col .column-info.right-column h2 {
+            display: block !important;
+            width: 440px !important;
+            max-width: 100% !important;
+          }
+          .responsive-space {
+            height: 8px !important;
+            line-height: 6px !important;
+          }
+
+          .responsive-text {
+            font-size: 11px !important;
+            line-height: 17px !important;
+          }
+        
+      }
+        
+        
+        
+        
+        
+        @media (min-width: 460px) {
+          .three-col .column {
+            max-width: 33.3% !important;
+          }
+          .two-col .column {
+            width: 50% !important;
+            
+          }
+          .sidebar .small {
+            max-width: 16% !important;
+          }
+          .sidebar .big {
+            max-width: 84% !important;
+          }
+          .line {
+            margin-left: 13px !important;
+            margin-right: 13px !important;
+          }
+          .horizontal-line {
+             margin-left: 13px !important;
+            margin-right: 13px !important;
+          }
+          
+       		.two-col .column-info.right-column {
+            text-align: right !important;
+          }
+          
+          .two-col .column .left-column {
+            text-align: left !important;
+          }
+          
+          
+          
+          
+          @media (min-width: 460px) and (max-width: 600px) {
+            .two-col .column .right-column {
+            text-align: right !important;
+          }
+           .two-col .column .left-column {
+            text-align: left !important;
+          }
+          .responsive-space {
+            height: 8px !important;
+            line-height: 6px !important;
+          }
+
+          .responsive-text {
+            font-size: 13px !important;
+            line-height: 16px !important;
+          }
+          }
+          
+
+          @media (min-width: 600px) and (max-width: 1200px) {
+            .two-col .column .right-column {
+            text-align: right !important;
+          }
+          
+          .two-col .column .left-column {
+            text-align: left !important;
+          } 
+
+   
+        }
+          
+      
+          
+        }
+
+      </style>
+</head>
+<body style="margin:0;padding:0;word-spacing:normal;">
+  <!-- below div is the outer wrapper, role=article and aria-roledescription=email helps screen readers announce its an email or at least an article and will assist navigation b-->
+    <div role="article" aria-roledescription="email" lang="en" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;background-color: #F7F8F9;">
+        <table role="presentation" style="width:100%;border:0;border-spacing:0;padding-top: 20px;">
+            <tr>
+                <td align="center">
+                  <!--[if mso]>
+                    <table role="presentation" align="center" style="width:660px"
+                    <tr>
+                    <td style="padding: 20px 0">
+                  <![endif]-->
+                      <div class="outer" style="width:96%; max-width: 600px; margin:20px auto;background-color:#ffffff; padding-left: 10px; padding-right: 10px;box-shadow: 0 0 10px rgba(0,0,0,0.2);  ">
+                        
+
+                      <!-- white space break -->
+                      <div class="spacer" style="line-height: 10px; height: 2px; mso-line-height-rule: exactly;">&nbsp;</div>
 
 
-        <!-- START OF TRANSACTION FIRST ROW -->
-        <tr>
-          <td align="center" style="padding-top: 20px">
-            <table align="center" role="presentation" border="0" cellspacing="0" cellpadding="0" width="80%"
-              style="background-color: #f7f7f7; border: 1px solid #e3e3e3; border-top-left-radius: 8px; border-top-right-radius: 8px;">
-                <tr>
-                  <td align="center">
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="92%">
+
+                      <!-- Single Column Header Logo -->
+                      <table role="presentation" style="width:80%; border:0; border-spacing:0;" cellpadding="0" cellspacing="0" >
                         <tr>
-                          <td width="100" align="left" style="padding-top: 15px">
-                            <p class="responsive-text" style="Margin: 0; font-weight: 700;  font-weight: bold; font-size: 15px; line-height: 14px; font-family: 'Montserrat', sans-serif;"
-                              > Streamify Premium
-                            </p>
-                          </td>
-                          <td align="right" width="100" style="padding-top: 5px">
-                            <p class="responsive-text"
-                              style="Margin: 0; font-size: 15px; line-height: 14px; font-family: 'Montserrat', sans-serif; font-weight: 300;">
-                              $12.99
-                            </p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td align="left" style="padding-top: 5px; padding-bottom: 10px;">
-                            <p class="responsive-text padding-top"
-                              style="Margin: 0; font-size: 15px; line-height: 24px; font-family: 'Montserrat', sans-serif; font-weight: 300;">
-                              1 month
-                            </p>
-                          </td>
-                        </tr>
-                    </table>
-                  </td>
-                </tr>
-            </table>
-          </td>
-        </tr>
-        <!-- END OF TRANSACTION FIRST ROW -->
-
-
-        <!-- START OF TRANSACTION SECOND ROW -->
-        <tr>
-          <td align="center">
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="80%"
-              style="background-color: #f7f7f7;border: 1px solid #e3e3e3;">
-                <tr>
-                  <td align="center">
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="92%">
-                        <tr>
-                          <td align="left" style="padding: 12px 0px">
-                            <p class="responsive-text"
-                              style="Margin: 0;font-weight: 700; font-family: 'Montserrat', sans-serif; font-size: 15px; line-height: 14px;">
-                              Sales Tax 8%
-                            </p>
-                          </td>
-                          <td align="right" style="padding: 10px 0px">
-                            <p class="responsive-text"
-                              style="Margin:0; font-family: 'Montserrat', sans-serif; font-size: 15px; line-height: 14px;">
-                              $1.03
-                            </p>
-                          </td>
-                        </tr>
-                    </table>
-                  </td>
-                </tr>
-            </table>
-          </td>
-        </tr>
-        <!-- END OF TRANSACTION SECOND ROW -->
-
-
-        <!-- START OF TRANSACTION THIRD ROW -->
-        <tr>
-          <td align="center">
-            <table align="center" border="0" role="presentation" cellpadding="0" cellspacing="0" width="80%"
-              style="background-color: #f7f7f7; border: 1px solid #e3e3e3; border-bottom-left-radius: 8px;  border-bottom-right-radius: 8px; ">
-                <tr>
-                  <td align="center">
-                    <table align="center" border="0" role="presentation" cellpadding="0" cellspacing="0" width="92%">
-                        <tr>
-                          <td align="left" style="padding: 10px 0px" width="100">
-                            <p class="responsive-text"
-                              style="Margin: 0; font-family: 'Montserrat', sans-serif; font-size: 15px; line-height: 14px; font-weight: 700;">
-                              Total</p>
-                          </td>
-                          <td align="right" style="padding: 12px 0px" width="100">
-                            <p class="responsive-text"
-                              style="Margin: 0; font-family: 'Montserrat', sans-serif; font-size: 15px; line-height: 14px;">
-                              $14.02</p>
-                          </td>
-                        </tr>
-                    </table>
-                  </td>
-                </tr>
-            </table>
-          </td>
-        </tr>
-        <!-- END OF TRANSACTION THIRD ROW -->
-
-
-        <!-- START OF PAYMENT METHOD & USERNAME -->
-        <tr>
-          <td align="center">
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="80%">
-                <tr>
-                  <td height="20px"
-                    style="line-height: 20px; font-size: 20px; font-family:'Montserrat', sans-serif; mso-line-height-rule: exactly;">
-                    &nbsp;</td>
-                </tr>
-                <tr>
-                  <td align="center">
-                    <p class="responsive-text"
-                      style="Margin:0; line-height: 14px; font-size: 14px; font-family:'Montserrat', sans-serif; font-weight: 600; color:rgb(97, 100,103) ">
-                      Payment Method
-                    </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td height="10px"
-                    style="line-height: 10px; font-size: 10px; font-family:'Montserrat', sans-serif; mso-line-height-rule: exactly;"
-                    class="mobile-space">&nbsp;</td>
-                </tr>
-                <tr>
-                  <td align="center">
-                    <p class="responsive-text"
-                      style="Margin:0; line-height: 14px; font-size: 14px; font-family:'Montserrat', sans-serif; font-weight: 300; color:rgb(97, 100,103) ">
-                      Card (#### #### #### 9784)
-                    </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td height="20px"
-                    style="line-height: 20px; font-size: 20px; font-family:'Montserrat', sans-serif; mso-line-height-rule: exactly;">
-                    &nbsp;</td>
-                </tr>
-                <tr>
-                  <td align="center">
-                    <p class="responsive-text"
-                      style="Margin:0; line-height: 14px; font-size: 14px; font-family:'Montserrat', sans-serif; font-weight: 600; color:rgb(97, 100,103) ">
-                      Username
-                    </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td height="10px"
-                    style="line-height: 10px; font-size: 10px; font-family:'Montserrat', sans-serif; mso-line-height-rule: exactly;"
-                    class="responsive-space">&nbsp;</td>
-                </tr>
-                <tr>
-                  <td align="center">
-                    <p class="responsive-text"
-                      style="Margin:0; line-height: 14px; font-size: 14px; font-family:'Montserrat', sans-serif; font-weight: 300; color:rgb(97, 100,103) ">
-                      Peter Griffin
-                    </p>
-                  </td>
-                </tr>
-            </table>
-          </td>
-        </tr>
-        <!-- END OF PAYMENT METHOD & USERNAME -->
-
-
-        <!-- START OF AUTHORIZATION -->
-        <tr>
-          <td align="center" style="padding-top: 25px">
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="80%">
-                <tr>
-                  <td align="center">
-                    <p style="Margin: 0; line-height: 24px; font-size: 16px; font-family:'Montserrat', sans-serif; font-weight: 300; color:rgb(144, 144, 145)"
-                      class="responsive-text line-height">
-                      You have authorized Streamify to automatically charge you the above price each month until you
-                      cancel. If the price changes, we’ll notify you beforehand. You can check your renewal date or cancel
-                      at any time on your account page following the instructions <a class="responsive-text" target="_blank"
-                        style="font-size: 16px; font-family:'Montserrat', sans-serif; font-weight: 300; color:#1255CC; text-decoration: underline; cursor: pointer;">here.
-                      </a>
-                      No partial refunds. Terms and Conditions apply. Important information for residents in the State of
-                      California <a class="responsive-text line-height"
-                        style="font-size: 16px; font-family:'Montserrat', sans-serif; font-weight: 300; color:#1255CC; text-decoration: underline; cursor: pointer;"
-                        target="_blank">here.</a>
-                    </p>
-                  </td>
-                </tr>
-            </table>
-          </td>
-        </tr>
-        <!-- END OF AUTHORIZATION -->
-
-        <!-- START OF FOOTER LOGO -->
-        <tr>
-          <td align="center" style="padding-top: 30px">
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="80%"
-              style="background-color: #f7f7f7">
-                <tr>
-                  <td align="center">
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="92%">
-                        <tr>
-                          <td align="left" style="padding: 8px; padding-left: 0px">
-                            <img src="https://i.ibb.co/Qf7SKm1/streamify-footer-logo.png" alt="streamify-footer-logo" border="0" 
-                              class="small-logo" width="70" height="24" style="Margin: 0; display: block;">
-                          </td>
-                        </tr>
-                    </table>
-                  </td>
-                </tr>
-            </table>
-          </td>
-        </tr>
-        <!-- END OF FOOTER LOGO -->
-
-
-        <!-- START OF GET STREAMIFY FOR -->
-        <tr>
-          <td align="center">
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="80%"
-              style="background-color: #f7f7f7">
-                <tr>
-                  <td align="center">
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="92%"
-                      style="border-top: 1px solid #D1D5D9">
-                        <tr> 
-                          <td class="full-width full-block" align="left" style="padding-top: 10px; ">
-                            <p style="margin: 0; color:rgb(97, 100, 103); font-family: Montserrat; font-size: 11px; font-weight: 300; line-height: 11px; padding-right: 11px; display: inline-block;"
-                              class="footer-text "> Get Streamify for: 
-                            </p>
-                          </td>
-                        </tr>
-                    </table>
-                  </td>
-                </tr>
-            </table>
-          </td>
-        </tr>
-        <!-- END OF GET LOGO FOR -->
-
-
-        <!-- START OF GET LOGO FOR -->
-        <tr>
-          <td align="center">
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="80%"
-              style="background-color: #f7f7f7">
-                <tr>
-                  <td align="left">
-                    <table align="left" border="0" cellpadding="0" cellspacing="0" role="presentation" width="50%">
-                        <tr>
-                          <td class="padding-left" align="left" style="padding: 15px 0px; padding-left: 17px">
-                            <a href="#" target="_blank"
-                              style="Margin: 0; color:rgb(97, 100, 103); font-family: Montserrat; font-size: 11px; font-weight: 600; line-height: 11px; padding-right: 10px; border-right: 1px solid #D1D5D9; "
-                              class="footer-links no-left-border"> iPhone 
-                            </a>
-                          </td>
-                          <td align="left" style="padding: 15px 0px">
-                            <a href="#" target="_blank"
-                              style="Margin: 0; color:rgb(97, 100, 103); font-family: Montserrat; font-size: 11px; font-weight: 600; line-height: 11px; padding-right: 11px; border-right: 1px solid #D1D5D9"
-                              class="footer-links"> iPad 
-                            </a>
-                          </td>
-                          <td align="left" style="padding: 15px 0px">
-                            <a href="#" target="_blank"
-                              style="Margin: 0; color:rgb(97, 100, 103); font-family: Montserrat; font-size: 11px; font-weight: 600; line-height: 11px; padding-right: 11px; border-right: 1px solid #D1D5D9"
-                              class="footer-links"> Android 
-                            </a>
-                          </td>
-                          <td align="left" style="padding: 15px 0px">
-                            <a href="#" target="_blank"
-                              style="Margin: 0; color:rgb(97, 100, 103); font-family: Montserrat; font-size: 11px; font-weight: 600; line-height: 11px; "
-                              class="footer-links"> Other 
-                            </a>
-                          </td>
-                        </tr>
-                    </table>
-                  </td> 
-                </tr>
-            </table>
-          </td>
-        </tr>
-        <!-- END OF GET LOGO FOR -->
-
-
-        <!-- START OF MESSAGE SENT TO -->
-        <tr>
-          <td align="center">
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="80%"
-              style="background-color: #F7F7F7">
-                <tr>
-                  <td align="center">
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="92%">
-                        <tr>
-                          <td align="left" style="padding: 15px 0px; border-top: 1px solid #D1D5D9;">
-                            <p style="Margin:0; color: rgb(97,100,103); font-family: 'Montserrat'; font-size: 11px; font-weight: 300; line-height: 17px;"
-                              class="footer-text">
-                              This message was sent to petergriffin@gmail.com. If you have questions or complaints, please contact us 
-                              <a class="footer-text"
-                                style="Margin:0; color: rgb(97,100,103); font-family: 'Montserrat'; font-size: 11px; font-weight: 600; cursor: pointer; text-decoration: underline;">here
-                              </a>
-                              or to unsubscribe 
-                              <a class="footer-text"
-                              style="Margin:0; color: rgb(97,100,103); font-family: 'Montserrat'; font-size: 11px; font-weight: 600; cursor: pointer; text-decoration: underline;">click here.
-                            </a>
-                            </p>
-                          </td>
-                        </tr>
-                    </table>
-                  </td>
-                </tr>
-            </table>
-          </td>
-        </tr>
-        <!-- END OF MESSAGE SENT TO -->
-
-
-        <!-- START OF ADDRESS -->
-        <tr>
-          <td align="center">
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="80%"
-              style="background-color: #f7f7f7">
-                <tr>
-                  <td align="center">
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="92%">
-                        <tr>
-                          <td align="left" style="padding-bottom: 20px">
-                            <p class="footer-text"
-                              style="Margin: 0; color: rgb(97,100,103); font-family: 'Montserrat'; font-size: 11px; font-weight: 300; line-height: 17px;">
-                              Streamify USA Inc., c/o BF&FG Service Corp., Six King Square, 15th floor, Eleventh and Ninth
-                              streets, Washington, New Jersey, California 90210, USA
-                            </p>
-                          </td>
-                        </tr>
-                    </table>
-                  </td>
-                </tr>
-            </table>
-          </td>
-        </tr>
-        <!-- END OF ADDRESS -->
-
-
-
-        <!-- START OF SOCIAL MEDIA ICONS -->
-        <tr>
-          <td align="center" style="padding-bottom: 20px">
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="80%"
-              style="background-color: #f7f7f7 ">
-                <tr>
-                  <td align="center">
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="92%"
-                      style="padding-bottom: 15px; display: inline-block">
-                        <tr>
-                          <td align="left" style="align-items:center; vertical-align: middle">
+                          <td align="left" style="padding-top: 30px; width:100%" >
                             <a href="#" target="_blank">
-                              <img class="social-icons" src="https://i.ibb.co/DbFGkmd/icons8-facebook-30-2.png" alt="icons8-facebook-30-2" border="0"
-                                width="22" height="22" style="margin-right: 5px">
-                              </a>
-                          </td>
-                          <td align="left">
-                            <a href="#" target="_blank">
-                              <img class="social-icons" src="https://i.ibb.co/ZGBxLHm/icons8-instagram-30.png" alt="icons8-instagram-30" border="0"
-                                width="22" height="22" style="margin-right: 5px">
-                            </a>
-                          </td>
-                          <td align="left">
-                            <a href="#" target="_blank">
-                              <img class="social-icons" src="https://i.ibb.co/zmR3WYs/icons8-linkedin-circled-30.png" alt="icons8-linkedin-circled-30" border="0"
-                                width="22" height="22" style="margin-right: 5px">
-                            </a>
-                          </td>
-                          <td align="left">
-                            <a href="#" target="_blank">
-                              <img class="social-icons" src="https://i.ibb.co/PhydWwG/icons8-twitter-30.png" alt="icons8-twitter-30" border="0"
-                                width="22" height="22" style="margin-right: 5px;">
-                            </a>
-                          </td>
-                          <td align="left">
-                            <a href="#" target="_blank">
-                              <img class="social-icons" src="https://i.ibb.co/yp95RS0/icons8-youtube-30.png" alt="icons8-youtube-30" border="0"
-                                width="22" height="22" style="margin-right: 5px;">
+                              <img src="https://i.ibb.co/p4CTQSP/logo-big-sliced.png" alt="streamify-logo-sliced" border="0" style="display: block; border: none; max-width: 100%;" width="170" class="logo" />
                             </a>
                           </td>
                         </tr>
-                    </table>
-                  </td>
-                </tr>
-            </table>
-          </td>
-        </tr>
-        <!-- END OF SOCIAL MEDIA ICONS -->
+                      </table>
 
-      <!-- END OF HTML TABLE-->
-    </table>
-    <!-- Main Table ( remove comment ) -->
-    <!--[if (gte mso 9 | (IE)]>
-        </td>
-        </tr>
-      </table>
-    <![endif]-->
+                        
+
+
+                      <!-- Single Column Enjoy Streamify Premium -->
+                      <table align="center" role="presentation" style="border:0; border-spacing:0; width:90%;" cellpadding="0" cellspacing="0" width="90%">
+                          <tr>
+                            <td align="center">
+                              <h1 style="Margin: 0; font-weight: 600; line-height: 35px; font-size: 35px;padding-top:22px;color: #555555 ;">Enjoy Streamify Premium
+                              </h1>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td height="20" style="line-height: 20px; height:20px; font-family: Arial, sans-serif; mso-line-height: exactly;"
+                              class="responsive-space">&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td align="center">
+                              <p style="Margin: 0; font-size: 15px; font-weight: 300; line-height: 14px; font-family: 'Montserrat', sans-serif;"
+                                class="responsive-text">June 9th, 2023</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td height="10"
+                              style="line-height: 11px;  font-family: 'Montserrat', sans-serif; mso-line-height: exactly;">&nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center">
+                              <p style="Margin: 0; font-size: 15px; font-weight: 300; line-height: 14px; font-family: 'Montserrat', sans-serif;"
+                              class="responsive-text">
+                                Order ID: #087954618498487
+                            </td>
+                            </p>
+                          </tr>
+                        </table>
+
+
+                     <!-- white space break -->
+                     <div class="spacer" style="line-height: 10px; height: 20px; mso-line-height-rule: exactly;">&nbsp;</div>
+
+                        
+                    <!-- Single Column TRANSACTION FIRST ROW -->
+                    <table align="center" role="presentation" border="0" cellspacing="0" cellpadding="0" width="80%"
+                  style="background-color: #f7f7f7; border: 1px solid #e3e3e3; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+                      <tr>
+                        <td align="center">
+                          <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="90%">
+                              <tr>
+                                <td width="100" align="left" style="padding-top: 15px">
+                                  <p class="responsive-text" style="Margin: 0; font-weight: 700;  font-weight: bold; font-size: 15px; line-height: 14px; font-family: 'Montserrat', sans-serif;"
+                                    > Streamify Premium
+                                  </p>
+                                </td>
+                                <td align="right" width="100" style="padding-top: 15px">
+                                  <p class="responsive-text"
+                                    style="Margin: 0; font-size: 15px; line-height: 14px; font-family: 'Montserrat', sans-serif; font-weight: 300;">
+                                    $12.99
+                                  </p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="padding-top: 5px; padding-bottom: 10px;">
+                                  <p class="responsive-text padding-top"
+                                    style="Margin: 0; font-size: 15px; line-height: 24px; font-family: 'Montserrat', sans-serif; font-weight: 300;">
+                                    1 month
+                                  </p>
+                                </td>
+                              </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+
+                        
+        
+                        
+          
+                        
+                     <!-- Single Column TRANSACTION SECOND ROW --> 
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="80%"
+                     style="background-color: #f7f7f7;border: 1px solid #e3e3e3;">
+                       <tr>
+                         <td align="center">
+                           <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="90%">
+                               <tr>
+                                 <td align="left" style="padding: 12px 0px">
+                                   <p class="responsive-text"
+                                     style="Margin: 0;font-weight: 700; font-family: 'Montserrat', sans-serif; font-size: 15px; line-height: 14px;">
+                                     Sales Tax 8%
+                                   </p>
+                                 </td>
+                                 <td align="right" style="padding: 12px 0px">
+                                   <p class="responsive-text"
+                                     style="Margin:0; font-family: 'Montserrat', sans-serif; font-size: 15px; line-height: 14px;">
+                                     $1.03
+                                   </p>
+                                 </td>
+                               </tr>
+                           </table>
+                         </td>
+                       </tr>
+                      </table>
+
+
+
+
+                                   
+                     <!-- Single Column TRANSACTION THIRD ROW --> 
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="80%"
+                     style="background-color: #f7f7f7;border: 1px solid #e3e3e3;border-bottom-left-radius: 8px;  border-bottom-right-radius: 8px;">
+                       <tr>
+                         <td align="center">
+                           <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="90%">
+                               <tr>
+                                 <td align="left" style="padding: 12px 0px">
+                                   <p class="responsive-text"
+                                     style="Margin: 0;font-weight: 700; font-family: 'Montserrat', sans-serif; font-size: 15px; line-height: 14px;">
+                                     Total
+                                   </p>
+                                 </td>
+                                 <td align="right" style="padding: 12px 0px">
+                                   <p class="responsive-text"
+                                     style="Margin:0; font-family: 'Montserrat', sans-serif; font-size: 15px; line-height: 14px;">
+                                     $14.02
+                                   </p>
+                                 </td>
+                               </tr>
+                           </table>
+                         </td>
+                       </tr>
+                      </table>
+              
+
+                      
+                      <!-- single Column PAYMENT METHOD & USERNAME -->
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="80%">
+                        <tr>
+                          <td height="20"
+                            style="line-height: 25px; font-size: 20px; font-family:'Montserrat', sans-serif; mso-line-height-rule: exactly;">
+                            &nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td align="center">
+                            <p class="responsive-text"
+                              style="Margin:0; line-height: 14px; font-size: 14px; font-family:'Montserrat', sans-serif; font-weight: 600; color:rgb(97, 100,103) ">
+                              Payment Method
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="10"
+                            style="line-height: 10px; font-size: 10px; font-family:'Montserrat', sans-serif; mso-line-height-rule: exactly;"
+                            class="mobile-space">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td align="center">
+                            <p class="responsive-text"
+                              style="Margin:0; line-height: 14px; font-size: 14px; font-family:'Montserrat', sans-serif; font-weight: 300; color:rgb(97, 100,103) ">
+                              Card (#### #### #### 9784)
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="20"
+                            style="line-height: 20px; font-size: 20px; font-family:'Montserrat', sans-serif; mso-line-height-rule: exactly;">
+                            &nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td align="center">
+                            <p class="responsive-text"
+                              style="Margin:0; line-height: 14px; font-size: 14px; font-family:'Montserrat', sans-serif; font-weight: 600; color:rgb(97, 100,103) ">
+                              Username
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="10"
+                            style="line-height: 10px; font-size: 10px; font-family:'Montserrat', sans-serif; mso-line-height-rule: exactly;"
+                            class="responsive-space">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td align="center">
+                            <p class="responsive-text"
+                              style="Margin:0; line-height: 14px; font-size: 14px; font-family:'Montserrat', sans-serif; font-weight: 300; color:rgb(97, 100,103) ">
+                              Peter Griffin
+                            </p>
+                          </td>
+                        </tr>
+                    </table>
+                
+
+                      <!-- white space break -->
+                      <div class="spacer" style="line-height: 10px; height: 25px; mso-line-height-rule: exactly;">&nbsp;</div>
+
+
+                    <!-- single Column Auhorization -->
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="75%">
+                      <tr>
+                        <td align="center" >
+                          <p style="Margin: 0; font-size: 15px; line-height: 24px; font-family:'Montserrat', sans-serif; font-weight: 300; color:rgb(144, 144, 145)"
+                            class="responsive-text">
+                            You have authorized Streamify to automatically charge you the above price each month until you
+                            cancel. If the price changes, we’ll notify you beforehand. You can check your renewal date or cancel
+                            at any time on your account page following the instructions <a class="responsive-text" target="_blank"
+                              style="font-size: 16px; font-family:'Montserrat', sans-serif; font-weight: 300; color:#1255CC; text-decoration: underline; cursor: pointer;">here.
+                            </a>
+                            No partial refunds. Terms and Conditions apply. Important information for residents in the State of
+                            California <a class="responsive-text line-height"
+                              style="font-size: 16px; font-family:'Montserrat', sans-serif; font-weight: 300; color:#1255CC; text-decoration: underline; cursor: pointer;"
+                              target="_blank">here.</a>
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                       
+
+
+                     <!-- white space break -->
+                     <div class="spacer" style="line-height: 10px; height: 20px; mso-line-height-rule: exactly;">&nbsp;</div>
+
+
+
+                    <!-- single column FOOTER first row -->
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="80%"
+                    style="background-color: #f7f7f7">
+                      <tr>
+                        <td align="center">
+                          <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="92%">
+                              <tr>
+                                <td align="left" style="padding: 8px; padding-left: 0px">
+                                  <img src="https://i.ibb.co/Qf7SKm1/streamify-footer-logo.png" alt="streamify-footer-logo" border="0" 
+                                    class="small-logo" width="70" height="24" style="Margin: 0; display: block;">
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                     </table>
+
+
+                      <!-- single column FOOTER second row -->
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="80%"
+                      style="background-color: #f7f7f7">
+                        <tr>
+                          <td align="center">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="90%"
+                              style="border-top: 1px solid #D1D5D9">
+                                <tr> 
+                                  <td class="full-width full-block" align="left" style="padding-top: 10px; padding-bottom:5px ">
+                                    <p style="margin: 0; color:rgb(97, 100, 103); font-family: Montserrat; font-size: 11px; font-weight: 300; line-height: 11px; padding-right: 11px; display: inline-block;"
+                                      class="footer-text "> Get Streamify for: 
+                                    </p>
+                                  </td>
+                                </tr>
+                            </table>
+                          </td>
+                        </tr>
+                       </table>
+
+
+
+                      <!-- single column FOOTER third row -->
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="80%"
+                      style="background-color: #f7f7f7">
+                       <tr>
+                        <td align="left">
+                          <table align="left" border="0" cellpadding="0" cellspacing="0" role="presentation" width="50%">
+                              <tr>
+                                <td class="padding-left" align="left" style="padding-bottom: 15px; padding-left: 22px">
+                                  <a href="#" target="_blank"
+                                    style="Margin: 0; color:rgb(97, 100, 103); font-family: Montserrat; font-size: 11px; font-weight: 600; line-height: 11px; padding-right: 10px; border-right: 1px solid #D1D5D9; "
+                                    class="footer-links no-left-border"> iPhone 
+                                  </a>
+                                </td>
+                                <td align="left" style="padding-bottom: 15px; padding-left: 14px">
+                                  <a href="#" target="_blank"
+                                    style="Margin: 0; color:rgb(97, 100, 103); font-family: Montserrat; font-size: 11px; font-weight: 600; line-height: 11px; padding-right: 11px; border-right: 1px solid #D1D5D9"
+                                    class="footer-links"> iPad 
+                                  </a>
+                                </td>
+                                <td align="left" style="padding-bottom: 15px; padding-left: 14px">
+                                  <a href="#" target="_blank"
+                                    style="Margin: 0; color:rgb(97, 100, 103); font-family: Montserrat; font-size: 11px; font-weight: 600; line-height: 11px; padding-right: 11px; border-right: 1px solid #D1D5D9"
+                                    class="footer-links"> Android 
+                                  </a>
+                                </td>
+                                <td align="left" style="padding-bottom: 15px; padding-left: 14px">
+                                  <a href="#" target="_blank"
+                                    style="Margin: 0; color:rgb(97, 100, 103); font-family: Montserrat; font-size: 11px; font-weight: 600; line-height: 11px; "
+                                    class="footer-links"> Other 
+                                  </a>
+                                </td>
+                              </tr>
+                          </table>
+                        </td> 
+                      </tr>
+                    </table>
+
+
+                    <!-- single column FOOTER fourth row -->
+                    <table align="center" border="0" cellpadding="0" cellspacing="0"  role="presentation" width="80%"
+                    style="background-color: #F7F7F7">
+                      <tr>
+                        <td align="center">
+                          <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="90%">
+                              <tr>
+                                <td align="left" style="padding: 15px 0px; border-top: 1px solid #D1D5D9;">
+                                  <p style="Margin:0; color: rgb(97,100,103); font-family: 'Montserrat'; font-size: 11px; font-weight: 300; line-height: 17px;"
+                                    class="footer-text">
+                                    This message was sent to petergriffin@gmail.com. If you have questions or complaints, please contact us 
+                                    <a class="footer-text"
+                                      style="Margin:0; color: rgb(97,100,103); font-family: 'Montserrat'; font-size: 11px; font-weight: 600; cursor: pointer; text-decoration: underline;">here
+                                    </a>
+                                    or to unsubscribe 
+                                    <a class="footer-text"
+                                    style="Margin:0; color: rgb(97,100,103); font-family: 'Montserrat'; font-size: 11px; font-weight: 600; cursor: pointer; text-decoration: underline;">click here.
+                                  </a>
+                                  </p>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    
+
+                       <!-- single column FOOTER fifth row -->
+                       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="80%"
+                       style="background-color: #f7f7f7">
+                         <tr>
+                           <td align="center">
+                             <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="90%">
+                                 <tr>
+                                   <td align="left" style="padding-bottom: 20px">
+                                     <p class="footer-text"
+                                       style="Margin: 0; color: rgb(97,100,103); font-family: 'Montserrat'; font-size: 11px; font-weight: 300; line-height: 17px;">
+                                       Streamify USA Inc., c/o BF&FG Service Corp., Six King Square, 15th floor, Eleventh and Ninth
+                                       streets, Washington, New Jersey, California 90210, USA
+                                     </p>
+                                   </td>
+                                 </tr>
+                             </table>
+                           </td>
+                          </tr>
+                        </table>
+          
+
+                      <!-- single column FOOTER sixth row -->
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="80%"
+                      style="background-color: #f7f7f7 ">
+                        <tr>
+                          <td align="center">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="92%"
+                              style="padding-bottom: 15px; display: inline-block">
+                                <tr>
+                                  <td align="left" style="align-items:center; vertical-align: middle">
+                                    <a href="#" target="_blank">
+                                      <img class="social-icons" src="https://i.ibb.co/DbFGkmd/icons8-facebook-30-2.png" alt="icons8-facebook-30-2" border="0"
+                                        width="22" height="22" style="margin-right: 5px">
+                                      </a>
+                                  </td>
+                                  <td align="left">
+                                    <a href="#" target="_blank">
+                                      <img class="social-icons" src="https://i.ibb.co/ZGBxLHm/icons8-instagram-30.png" alt="icons8-instagram-30" border="0"
+                                        width="22" height="22" style="margin-right: 5px">
+                                    </a>
+                                  </td>
+                                  <td align="left">
+                                    <a href="#" target="_blank">
+                                      <img class="social-icons" src="https://i.ibb.co/zmR3WYs/icons8-linkedin-circled-30.png" alt="icons8-linkedin-circled-30" border="0"
+                                        width="22" height="22" style="margin-right: 5px">
+                                    </a>
+                                  </td>
+                                  <td align="left">
+                                    <a href="#" target="_blank">
+                                      <img class="social-icons" src="https://i.ibb.co/PhydWwG/icons8-twitter-30.png" alt="icons8-twitter-30" border="0"
+                                        width="22" height="22" style="margin-right: 5px;">
+                                    </a>
+                                  </td>
+                                  <td align="left">
+                                    <a href="#" target="_blank">
+                                      <img class="social-icons" src="https://i.ibb.co/yp95RS0/icons8-youtube-30.png" alt="icons8-youtube-30" border="0"
+                                        width="22" height="22" style="margin-right: 5px;">
+                                    </a>
+                                  </td>
+                                </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+
+                        
+                   <!-- white space break -->
+                   <!--[if mso]>
+												<i style="letter-spacing:50px;mso-font-width:-100%;display:inline-block;width:40px">&#8202;
+ 											<![endif]-->
+                  <div class="spacer" style="line-height:2px;height:35px;mso-line-height-rule:exactly;">&nbsp;</div>
+                  <!--[if mso]>
+												</i>
+ 									<![endif]-->
+                        
+
+
+
+                       
+
+                  <!--[if mso]>
+                    </tr>
+                    </td>  
+                    </table>
+                  <![endif]-->  
+                </td>
+            </tr>
+        </table>
     </div>
-  </center>
 </body>
 </html>
